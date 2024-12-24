@@ -1,0 +1,159 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip to content */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 8px;
+  background-color: #bf1722;
+  color: white;
+  z-index: 100;
+  text-decoration: none;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* App Bar */
+.app-bar {
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-bar__menu {
+  display: none;
+}
+
+.app-bar__menu button {
+  min-width: 44px;
+  min-height: 44px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.app-bar__brand h1 {
+  color: #bf1722;
+  font-size: 1.5rem;
+}
+
+.app-bar__navigation {
+  flex-grow: 1;
+}
+
+.app-bar__navigation ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  list-style: none;
+}
+
+.app-bar__navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  padding: 1rem;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/* Hero */
+.hero {
+  background-image: url('../public/images/heros/hero-image_4.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero__inner {
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 8px;
+}
+
+.hero__title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Restaurant List */
+.content {
+  padding: 2rem;
+}
+
+.restaurant-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.restaurant-item {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-item__image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.restaurant-item__content {
+  padding: 1rem;
+}
+
+.restaurant-item__title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.restaurant-item__city {
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.restaurant-item__rating {
+  color: #bf1722;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
